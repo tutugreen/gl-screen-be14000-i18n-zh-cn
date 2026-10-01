@@ -2,6 +2,12 @@
 
 Unofficial Simplified Chinese screen language pack for GL.iNet GL-BE14000.
 
+## Device screenshot
+
+![GL-BE14000 home screen with Simplified Chinese labels](docs/images/be14000-zh-cn-home.png)
+
+Actual device framebuffer capture after installing test build `2026.10.01.130556`.
+
 ## Compatibility
 
 | Item | Required / inspected version |
@@ -12,7 +18,8 @@ Unofficial Simplified Chinese screen language pack for GL.iNet GL-BE14000.
 | Original screen package | gl-sdk4-screen-large git-2026.208.53992-2c8f014-1 |
 
 The package requires the exact screen package version. Do not force dependency overrides.
-Device installation and screen layout validation have not yet been performed.
+Installation and upgrade have been tested on the device. The home screen was
+visually checked; other screens and package removal still need validation.
 
 ## Build
 
