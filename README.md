@@ -7,7 +7,6 @@ Unofficial Simplified Chinese screen language pack for GL.iNet GL-BE14000.
 ![GL-BE14000 home screen with Simplified Chinese labels](docs/images/be14000-zh-cn-home.png)
 
 Actual device framebuffer capture after installing test build `2026.10.01.130556`.
-The home screen includes the shortened “USB 共享” label.
 
 ## Compatibility
 
