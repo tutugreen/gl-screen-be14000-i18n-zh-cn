@@ -1,0 +1,6 @@
+* text=auto
+*.py text eol=lf
+*.yml text eol=lf
+package/scripts/* text eol=lf
+sources/en text eol=lf
+sources/zh_cn text eol=lf

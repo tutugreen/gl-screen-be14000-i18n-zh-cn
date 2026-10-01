@@ -1,0 +1,24 @@
+#!/bin/sh
+# 在 postinst 覆盖 language/text/default 之前，备份当前文件（通常为原版英文）
+[ "${IPKG_NO_SCRIPT}" = "1" ] && exit 0
+
+if [ -z "${IPKG_INSTROOT}" ] && [ "$(cat /tmp/sysinfo/board_name 2>/dev/null)" != "glinet,gl-be14000" ]; then
+	echo "This package requires GL-BE14000." >&2
+	exit 1
+fi
+
+TEXT=/etc/gl_screen/language/text/default
+BACKUP="${TEXT}.opkg-dist"
+
+case "$1" in
+install)
+	if [ ! -f "$BACKUP" ] && [ -f "$TEXT" ]; then
+		cp "$TEXT" "$BACKUP"
+	fi
+	;;
+upgrade)
+	# 保留首次安装时备份，避免把中文版当成“原版”
+	;;
+esac
+
+exit 0
